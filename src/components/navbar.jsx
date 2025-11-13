@@ -1,12 +1,12 @@
 import React from "react";
-import logo from "../assets/react.svg";
+import logo from "../assets/icons/mybitmojiimg.svg";
 import '../styles/navbar.css'
 const Navbar = () => {
   return (
     <>
       <div className="navi">
         <div className="left">
-          <img src={logo} alt="React logo" />
+          <img src={logo} alt="React logo" className="logo-img" />
         </div>
         <div className="right">
           <div className="about">About</div>
