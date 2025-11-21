@@ -1,0 +1,41 @@
+.navbar {
+  width: 60vw;
+  margin: 32px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 32px;
+  background: rgba(30, 32, 47, 0.55);
+  box-shadow: 0 6px 32px 0 rgba(24, 39, 75, 0.24);
+  border-radius: 30px;
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.navbar-left {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 32px;
+}
+
+.About, .resume, .contact {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.About:hover,
+.resume:hover,
+.contact:hover {
+  color: #A7FFEB;
+}
