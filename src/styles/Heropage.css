@@ -1,0 +1,154 @@
+
+:root {
+    --dark-bg: #0a0c10;
+    --text-light: #ffffff;
+    --text-primary-gradient: linear-gradient(90deg, #6c63ff, #00c6ff);
+    --btn-primary-color: #6c63ff;
+    --btn-secondary-color: #00c6ff;
+    --btn-tertiary-color: #33363e;
+    --border-color: #33363e;
+}
+
+body {
+    background-color:  #0a0c10;
+    color:#ffffff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    min-height: 500px;
+    background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Content Area */
+.hero-content {
+    max-width: 50%;
+    z-index: 10;
+}
+
+.role-tag {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 1px solid var(--border-color);
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.main-heading {
+    font-size: 64px;
+    line-height: 1.1;
+    font-weight: 800;
+    margin: 0 0 20px 0;
+    color: #ffa8ff;
+}
+
+.digital-future {
+    background: #df4dec;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    position: relative;
+}
+
+.tagline {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #1b284b;
+    margin-bottom: 40px;
+}
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--btn-primary-color);
+    color: var(--text-light);
+}
+
+.btn-secondary {
+    background-color: var(--btn-secondary-color);
+    color: var(--dark-bg);
+}
+
+.btn-tertiary {
+    background-color: transparent;
+    color: var(--text-light);
+    border-color: var(--border-color);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+
+.hero-graphic {
+    width: 350px;
+    height: 350px;
+    position: relative;
+}
+
+.hero-graphic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px dashed rgba(255, 255, 255, 0.4);
+    box-sizing: border-box;
+    transform: rotate(5deg);
+}
+
+.hero-graphic {
+    background-image: url('../assets/harsha.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.hero-graphic::after {
+    content: '⚡';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+}
+
+.hero-graphic .hero-graphic::before {
+    content: '💻';
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    font-size: 20px;
+}
