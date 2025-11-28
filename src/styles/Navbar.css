@@ -39,3 +39,6 @@
 .contact:hover {
   color: #A7FFEB;
 }
+.logoclass {
+  filter: brightness(0) invert(1);
+}
