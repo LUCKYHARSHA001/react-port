@@ -1,17 +1,6 @@
-
-:root {
-    --dark-bg: #0a0c10;
-    --text-light: #ffffff;
-    --text-primary-gradient: linear-gradient(90deg, #6c63ff, #00c6ff);
-    --btn-primary-color: #6c63ff;
-    --btn-secondary-color: #00c6ff;
-    --btn-tertiary-color: #33363e;
-    --border-color: #33363e;
-}
-
 body {
-    background-color:  #0a0c10;
-    color:#ffffff;
+    background-color: #0a0c10;
+    color: #ffffff;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -40,11 +29,11 @@ body {
     font-size: 14px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    border: 1px solid var(--border-color);
+    border: 1px solid #33363e;
     padding: 4px 12px;
     border-radius: 20px;
     display: inline-block;
-    color: var(--text-light);
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
@@ -61,7 +50,6 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
     position: relative;
 }
 
@@ -71,6 +59,7 @@ body {
     color: white;
     margin-bottom: 40px;
 }
+
 .cta-buttons {
     display: flex;
     gap: 15px;
@@ -86,19 +75,19 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--btn-primary-color);
-    color: var(--text-light);
+    background-color: #6c63ff;
+    color: #ffffff;
 }
 
 .btn-secondary {
-    background-color: var(--btn-secondary-color);
-    color: var(--dark-bg);
+    background-color: #00c6ff;
+    color: #0a0c10;
 }
 
 .btn-tertiary {
     background-color: transparent;
-    color: var(--text-light);
-    border-color: var(--border-color);
+    color: #ffffff;
+    border-color: #33363e;
 }
 
 .btn:hover {
@@ -111,6 +100,12 @@ body {
     width: 350px;
     height: 350px;
     position: relative;
+    background-image: url('../assets/harsha.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
 .hero-graphic::before {
@@ -124,16 +119,6 @@ body {
     border: 3px dashed rgba(255, 255, 255, 0.4);
     box-sizing: border-box;
     transform: rotate(5deg);
-}
-
-.hero-graphic {
-    background-image: url('../assets/harsha.jpg');
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
 .hero-graphic::after {
