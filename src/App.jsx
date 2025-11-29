@@ -8,6 +8,7 @@ import "./styles/LoadingScreen.css";
 import Navbar from "./components/Navbar.jsx";
 import FloatingLines from "./components/Floatinglines.jsx";
 import Heropage from "./components/heropage.jsx";
+import SkillPage from "./components/Skills.jsx"
 const LoadingScreen = ({ onComplete }) => {
   useEffect(() => {
     const timer = setTimeout(onComplete, 2500);
@@ -88,6 +89,7 @@ function App() {
             >
               <Navbar />
               <Heropage />
+              <SkillPage/>
             </div>
           </motion.div>
         )}
