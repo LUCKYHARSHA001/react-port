@@ -8,8 +8,6 @@ import "./styles/LoadingScreen.css";
 import Navbar from "./components/Navbar.jsx";
 import FloatingLines from "./components/Floatinglines.jsx";
 import Heropage from "./components/heropage.jsx";
-
-// Converted to standard JS
 const LoadingScreen = ({ onComplete }) => {
   useEffect(() => {
     const timer = setTimeout(onComplete, 2500);
@@ -59,7 +57,6 @@ function App() {
 
   return (
     <>
-      {/* AnimatePresence is required for the exit animation to work */}
       <AnimatePresence mode="wait">
         {isLoading ? (
           <LoadingScreen onComplete={() => setIsLoading(false)} />
