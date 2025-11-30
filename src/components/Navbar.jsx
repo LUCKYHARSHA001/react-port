@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Navbar.css";
-import harshalogo from "../assets/harshabitmoji.svg";
+import harshalogo from "../assets/freepikavatar.svg";
 const Navbar = () => {
   return (
     <>
