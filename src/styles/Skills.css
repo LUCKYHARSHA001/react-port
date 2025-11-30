@@ -3,6 +3,8 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 80px 16px;
+  margin-bottom: 120px;
+  scroll-margin-top: 120px;
 }
 
 .skills-header {

@@ -1,0 +1,190 @@
+/* --- Header Section --- */
+.projects-page-top {
+  text-align: center;
+  margin-bottom: 60px; /* Space between header and grid */
+  padding: 0 20px;
+}
+
+.projects-page-top h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+  
+  /* Gradient Text Effect */
+  background: linear-gradient(90deg, #ffffff, #a5a5b5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Subtle glow */
+  text-shadow: 0 0 30px rgba(109, 93, 252, 0.4);
+}
+
+.projects-page-top p {
+  color: #9ca3af;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto; /* Centers the text block */
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .projects-page-top h1 {
+    font-size: 2.2rem; /* Smaller title on mobile */
+  }
+}
+/* --- Wrapper --- */
+.projects-section-bg {
+  background-color: #050508;
+  padding: 60px 20px;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 200px;
+}
+
+.section-title {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+/* --- Grid --- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* --- Card --- */
+.project-card {
+  background-color: #0d0d12;
+  border: 1px solid #1f1f2e;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: #6d5dfc; /* Purple Border on Hover */
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(109, 93, 252, 0.15);
+}
+
+/* --- Images --- */
+.card-image-wrapper {
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .card-image-wrapper img {
+  transform: scale(1.05);
+}
+
+/* --- Content --- */
+.card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Makes sure cards are same height */
+}
+
+.card-header h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 0 10px 0;
+  transition: color 0.3s;
+}
+
+.project-card:hover .card-header h3 {
+  color: #6d5dfc;
+}
+
+.card-content p {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+/* --- Tags --- */
+.tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.tag {
+  background-color: #1a1a24;
+  color: #c4c4d0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  border: 1px solid #2a2a3a;
+}
+
+/* --- FOOTER (The Buttons) --- */
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Space between the two buttons */
+  margin-top: auto; /* Pushes footer to the bottom */
+}
+
+/* 1. Wide View Project Button */
+.view-project-btn {
+  flex: 1; /* Makes it take up all remaining width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  border: 1px solid #2a2a3a;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+/* 2. Square GitHub Button */
+.github-btn {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #2a2a3a;
+  color: #c4c4d0;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+/* --- Button Hover Effects --- */
+/* When hovering the CARD, the main button lights up purple */
+.project-card:hover .view-project-btn {
+  background-color: #6d5dfc;
+  border-color: #6d5dfc;
+}
+
+.github-btn:hover {
+  background-color: #1a1a24;
+  color: #fff;
+  border-color: #fff;
+}

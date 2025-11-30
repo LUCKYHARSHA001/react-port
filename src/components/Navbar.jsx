@@ -6,13 +6,20 @@ const Navbar = () => {
     <>
       <div className="navbar">
         <div className="navbar-left">
-          <img src={harshalogo} className="logoclass" alt="bitmoji" height="50px" width="50px"/>
-          Harsha</div>
+          <img
+            src={harshalogo}
+            className="logoclass"
+            alt="bitmoji"
+            height="50px"
+            width="50px"
+          />
+          Harsha
+        </div>
         <div className="navbar-right">
-          <div className="Skills">Skills</div>
-          <div className="Projects">Projects</div>
-          <div className="contact">Contact</div>
-          <div className="resume">Resume</div>
+          <a href="#skills" className="Skills">Skills</a>
+          <a href="#Projects" className="Projects">Projects</a>
+          <a href="#Contact" className="contact">Contact</a>
+          <a href="/resume.pdf" download="Harsha_Resume.pdf" className="resume">Resume</a>
         </div>
       </div>
     </>

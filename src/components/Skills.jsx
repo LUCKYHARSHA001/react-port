@@ -233,7 +233,10 @@ const CIcon = () => (
 
 const CppIcon = () => (
   <svg viewBox="0 0 128 128" fill="currentColor" className="w-full h-full">
-    <path d="M117.5 33.5l-9 15.75c-10.25-6-22.5-9-35.75-9-29 0-52.5 23.5-52.5 52.5s23.5 52.5 52.5 52.5c13.25 0 25.5-3 35.75-9l9 15.75C103.75 159.25 88.75 163.25 72.75 163.25 33.75 163.25 2.25 131.75 2.25 92.75c0-39 31.5-70.5 70.5-70.5 16 0 31 4 44.75 11.25zM113.25 80.75v12h-12v12h12v12h12v-12h12v-12h-12v-12h-12zm-35 12h12v-12h12v12h12v12h-12v12h-12v-12h-12v-12z" transform="translate(0 -15) scale(0.9)"/>
+    <path
+      d="M117.5 33.5l-9 15.75c-10.25-6-22.5-9-35.75-9-29 0-52.5 23.5-52.5 52.5s23.5 52.5 52.5 52.5c13.25 0 25.5-3 35.75-9l9 15.75C103.75 159.25 88.75 163.25 72.75 163.25 33.75 163.25 2.25 131.75 2.25 92.75c0-39 31.5-70.5 70.5-70.5 16 0 31 4 44.75 11.25zM113.25 80.75v12h-12v12h12v12h12v-12h12v-12h-12v-12h-12zm-35 12h12v-12h12v12h12v12h-12v12h-12v-12h-12v-12z"
+      transform="translate(0 -15) scale(0.9)"
+    />
   </svg>
 );
 
@@ -251,7 +254,6 @@ const skillCategories = [
       { name: "React", icon: ReactIcon, color: "#55b1f2ff" },
       { name: "HTML5", icon: HtmlIcon, color: "#E34F26" },
       { name: "CSS3", icon: CssIcon, color: "#1572B6" },
-      
     ],
   },
   {
@@ -259,8 +261,7 @@ const skillCategories = [
     skills: [
       { name: "Node.js", icon: NodeIcon, color: "#339933" },
       { name: "SQL", icon: MySqlIcon, color: "#083357ff" },
-      { name: "Python", icon: PythonIcon, color: "#3776AB" }
-      
+      { name: "Python", icon: PythonIcon, color: "#3776AB" },
     ],
   },
   {
@@ -314,7 +315,7 @@ const GlassSkillCard = ({ skill }) => {
 
 const Skills = () => {
   return (
-    <div className="skills-container">
+    <div id="skills" className="skills-container">
       <div className="skills-header">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
