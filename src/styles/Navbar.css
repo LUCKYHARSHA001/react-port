@@ -29,7 +29,6 @@
   .Skills, .resume, .contact, .Projects { font-size: 1rem; gap: 14px; }
 }
 
-/* Medium screens (laptops/tablets) */
 @media (max-width: 1024px) {
   .navbar {
     width: 70vw;
@@ -40,7 +39,6 @@
   .Skills, .resume, .contact, .Projects { font-size: 1.05rem; }
 }
 
-/* Small screens (phones) */
 @media (max-width: 600px) {
   .navbar {
     width: 96vw;
@@ -54,7 +52,7 @@
   .navbar-right { gap: 12px; }
   .Skills, .resume, .contact, .Projects { font-size: 0.95rem; }
   .navbar-right { flex-wrap: wrap; max-width: 60%; }
-  /* On small screens show only the resume link in navbar */
+  
   .navbar-right .Skills,
   .navbar-right .Projects,
   .navbar-right .contact {
@@ -66,7 +64,6 @@
   }
 }
 
-/* Extra small (very small phones) - allow horizontal scroll for nav items */
 @media (max-width: 420px) {
   .navbar {
     width: 98vw;
@@ -77,7 +74,7 @@
   .navbar-left { font-size: 0.98rem; }
   .navbar-right { gap: 10px; max-width: 65%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .Skills, .resume, .contact, .Projects { font-size: 0.9rem; padding: 6px 4px; }
-  /* Extra safety: hide non-resume links on very small screens */
+  
   .navbar-right .Skills,
   .navbar-right .Projects,
   .navbar-right .contact {
@@ -119,7 +116,7 @@
   color: #A7FFEB;
 }
 .logoclass {
-  filter: brightness(0) invert(1);
+  
   display: inline-block;
   vertical-align: middle;
 }

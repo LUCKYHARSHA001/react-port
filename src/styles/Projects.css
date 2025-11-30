@@ -40,8 +40,6 @@
   gap: 3rem;
 }
 
-/* --- 3D CARD STYLES --- */
-
 .perspective-container {
   height: var(--card-height);
   width: 100%;
@@ -57,22 +55,22 @@
   border-radius: 1rem;
   backdrop-filter: blur(10px);
   
-  /* IMPORTANT: Use the variables set by JS, default to 0deg */
+  
   transform: rotateX(var(--rotateX, 0deg)) rotateY(var(--rotateY, 0deg));
   transform-style: preserve-3d;
   
-  /* Smooth transition for when mouse leaves, but instant for when mouse moves */
+  
   transition: transform 0.1s ease-out, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Only change border/shadow on hover, rotation is handled by JS */
+ 
 .project-card:hover {
   border-color: rgba(168, 85, 247, 0.5);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 
-/* 4. Internal Layout */
+ 
 .card-content {
   position: absolute;
   inset: 0;
@@ -82,10 +80,10 @@
   overflow: hidden;
   transform: translateZ(20px); 
   transform-style: preserve-3d;
-  pointer-events: none; /* Let clicks pass through to the card for tracking */
+  pointer-events: none;
 }
 
-/* 5. Image Area */
+ 
 .card-image-wrapper {
   position: relative;
   height: 12rem;
@@ -107,7 +105,7 @@
   transform: translateZ(30px) scale(1.1);
 }
 
-/* Dark overlay on image */
+ 
 .image-overlay {
   position: absolute;
   inset: 0;
@@ -119,7 +117,7 @@
   background: transparent;
 }
 
-/* 6. Text Elements */
+ 
 .card-text-area {
   padding: 1.5rem;
   flex-grow: 1;
@@ -128,7 +126,7 @@
   justify-content: space-between;
   background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.4));
   transform-style: preserve-3d;
-  pointer-events: auto; /* Re-enable pointer events for buttons */
+  pointer-events: auto;
 }
 
 .card-text-area h3 {
@@ -170,7 +168,7 @@
   color: var(--text-secondary);
 }
 
-/* 7. Action Buttons */
+ 
 .card-actions {
   display: flex;
   gap: 1rem;
@@ -222,7 +220,7 @@
   background: rgba(255, 255, 255, 0.15);
 }
 
-/* 8. Decorative Corners */
+ 
 .corner-bracket {
   position: absolute;
   width: 2rem;
@@ -249,4 +247,145 @@
 
 .project-card:hover .corner-bracket {
   border-color: var(--accent-color);
+}
+
+ 
+
+ 
+@media (max-width: 1024px) {
+  :root { --card-height: 380px; }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 2rem;
+  }
+
+  .perspective-container {
+    height: var(--card-height);
+  }
+
+  .card-image-wrapper {
+    height: 10rem;
+  }
+
+  .projects-page-top h1 {
+    font-size: 2.5rem;
+  }
+}
+
+ 
+@media (max-width: 768px) {
+  :root { --card-height: 360px; }
+
+  .projects-container {
+    padding: 0 0.75rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.75rem;
+  }
+
+  .perspective-container {
+    height: var(--card-height);
+  }
+
+  .card-image-wrapper {
+    height: 9rem;
+  }
+
+  .card-text-area {
+    padding: 1rem;
+  }
+
+  .card-text-area h3 {
+    font-size: 1.25rem;
+  }
+
+  .card-text-area p {
+    font-size: 0.95rem;
+  }
+
+  .projects-page-top h1 {
+    font-size: 2rem;
+  }
+
+  .projects-page-top p {
+    font-size: 1rem;
+  }
+}
+
+ 
+@media (max-width: 480px) {
+  :root { --card-height: 320px; }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .perspective-container {
+    height: var(--card-height);
+  }
+
+  .card-image-wrapper {
+    height: 8rem;
+  }
+
+  .card-content {
+    transform: translateZ(15px);
+  }
+
+  .card-text-area {
+    padding: 0.85rem;
+  }
+
+  .card-text-area h3 {
+    font-size: 1.1rem;
+  }
+
+  .card-text-area p {
+    font-size: 0.9rem;
+  }
+
+  .tags-row {
+    gap: 0.35rem;
+  }
+
+  
+  .card-actions {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: flex-start;
+  }
+
+  
+  .view-project-btn {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.82rem;
+    width: auto;
+  }
+
+  
+  .github-btn {
+    flex: 0 0 auto;
+    width: 40px;
+    padding: 0.35rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .projects-page-top h1 {
+    font-size: 1.6rem;
+  }
+
+  .projects-page-top p {
+    font-size: 0.95rem;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
 }

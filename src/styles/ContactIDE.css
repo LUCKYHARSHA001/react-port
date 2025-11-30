@@ -17,7 +17,7 @@
   padding: 40px 20px;
   min-height: 100vh;
   display: flex;
-  flex-direction: column; /* Stacks header above IDE */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -48,13 +48,13 @@
   display: flex;
   width: 100%;
   max-width: 1000px;
-  min-height: 600px; /* Ensure enough height */
+  min-height: 600px;
   background-color: var(--vscode-bg);
   color: var(--vscode-text);
-  font-family: 'Consolas', 'Courier New', monospace; /* Monospace for code look */
+  font-family: 'Consolas', 'Courier New', monospace;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7); /* Deep shadow */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
   border: 1px solid var(--vscode-border);
   position: relative;
 }
@@ -65,7 +65,7 @@
   border-right: 1px solid var(--vscode-border);
   display: flex;
   flex-direction: column;
-  flex-shrink: 0; /* Prevents sidebar from shrinking */
+  flex-shrink: 0;
 }
 
 .sidebar-header {
@@ -75,7 +75,7 @@
   font-weight: bold;
   color: #bbbbbb;
   text-transform: uppercase;
-  background-color: #333333; /* Slightly lighter header */
+  background-color: #333333;
 }
 
 .explorer-section {
@@ -105,7 +105,7 @@
   align-items: center;
   gap: 10px;
   color: var(--vscode-text);
-  text-decoration: none; /* Remove underline from links */
+  text-decoration: none;
   transition: background 0.2s;
 }
 
@@ -129,11 +129,11 @@
 }
 
 .editor-tabs {
-  background-color: #1e1e1e; /* Match editor bg */
+  background-color: #1e1e1e;
   display: flex;
   height: 40px;
   border-bottom: 1px solid var(--vscode-border);
-  overflow-x: auto; /* Scroll if too many tabs */
+  overflow-x: auto;
 }
 
 .tab {
@@ -144,13 +144,13 @@
   align-items: center;
   gap: 10px;
   font-size: 0.9rem;
-  border-top: 2px solid var(--vscode-accent); /* Active tab indicator */
+  border-top: 2px solid var(--vscode-accent);
   color: white;
   cursor: pointer;
 }
 
 .tab-icon {
-  color: #61dafb; /* React Blue */
+  color: #61dafb;
   font-size: 1.1rem;
 }
 
@@ -158,45 +158,45 @@
   padding: 25px 10px;
   overflow-y: auto;
   flex: 1;
-  counter-reset: line; /* Setup for pure CSS line numbers if needed later */
+  counter-reset: line;
 }
 
 .code-line {
   display: flex;
-  line-height: 1.6; /* Comfortable reading height */
+  line-height: 1.6;
   font-size: 1rem;
-  align-items: flex-start; /* Align to top for multiline textarea */
+  align-items: flex-start;
 }
 
 .line-num {
   width: 45px;
   text-align: right;
   padding-right: 20px;
-  color: #6e7681; /* Dim grey for numbers */
+  color: #6e7681;
   font-size: 0.9rem;
-  user-select: none; /* Prevent selecting line numbers */
+  user-select: none;
 }
 
 .code-content {
   flex: 1;
   padding-left: 5px;
   display: flex;
-  flex-wrap: wrap; /* Allows wrapping on small screens */
+  flex-wrap: wrap;
   align-items: center;
 }
 
 .keyword { color: var(--vscode-keyword); }
 .function { color: var(--vscode-function); }
 .string { color: var(--vscode-string); }
-.variable { color: #9cdcfe; } /* Light Blue */
-.bracket { color: #ffd700; } /* Gold */
+.variable { color: #9cdcfe; }
+.bracket { color: #ffd700; }
 .comment { color: var(--vscode-comment); font-style: italic; }
 
 .code-input {
   background: transparent;
   border: none;
-  border-bottom: 1px dashed #444; /* Subtle guide line */
-  color: var(--vscode-string); /* Orange text for inputs */
+  border-bottom: 1px dashed #444;
+  color: var(--vscode-string);
   font-family: inherit;
   font-size: inherit;
   outline: none;
@@ -210,7 +210,7 @@
 }
 
 .code-input::placeholder {
-  color: var(--vscode-comment); /* Green placeholder looks like comments */
+  color: var(--vscode-comment);
   opacity: 0.6;
 }
 
@@ -228,13 +228,14 @@ textarea.code-input {
   font-family: inherit;
   font-size: 0.9rem;
   cursor: pointer;
-  margin-left: 10px;
+  margin-left: 60px;
+  margin-right: 100px;
   border-radius: 4px;
   transition: background-color 0.2s;
 }
 
 .submit-btn:hover {
-  background-color: #0062a3; /* Darker blue */
+  background-color: #0062a3;
 }
 
 @keyframes fadeIn {
@@ -252,7 +253,7 @@ textarea.code-input {
   }
 
   .ide-container {
-    flex-direction: column; /* Stack sidebar on top of editor */
+    flex-direction: column;
     height: auto;
   }
 
@@ -262,7 +263,7 @@ textarea.code-input {
     border-bottom: 1px solid var(--vscode-border);
   }
 
-  /* Make sidebar horizontal scrolling or just list items */
+  
   .file-list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -277,17 +278,17 @@ textarea.code-input {
   }
 
   .code-input {
-    width: 100% !important; /* Force inputs to take full width on mobile */
+    width: 100% !important;
     margin-top: 5px;
     margin-bottom: 5px;
   }
   
   .code-content {
-    display: block; /* Break flex layout for lines with inputs */
+    display: block;
     padding-left: 0;
   }
 
   .line-num {
-    display: none; /* Hide line numbers on very small screens to save space */
+    display: none;
   }
 }

@@ -140,7 +140,7 @@ const ContactIDE = () => {
                 <div className="code-content">
                   <span className="keyword">return</span> 
                   <button type="button" className="submit-btn">
-                     sendTransmission(sender);
+                     sendTransmission;
                   </button>
                 </div>
               </div>
