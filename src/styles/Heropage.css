@@ -65,7 +65,6 @@ body {
     gap: 15px;
 }
 
-/* Circular GitHub CTA */
 .github-cta {
     display: inline-flex;
     align-items: center;
@@ -85,7 +84,6 @@ body {
     color: #37f87e;
 }
 
-/* Circular Email CTA (matches github CTA) */
 .email-cta {
     display: inline-flex;
     align-items: center;
@@ -105,7 +103,6 @@ body {
     color: rgb(223, 4, 4);
 }
 
-/* Circular LinkedIn CTA (matches github/email CTA) */
 .linkedin-cta {
     display: inline-flex;
     align-items: center;

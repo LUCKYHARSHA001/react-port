@@ -1,7 +1,6 @@
-/* --- Header Section --- */
 .projects-page-top {
   text-align: center;
-  margin-bottom: 60px; /* Space between header and grid */
+  margin-bottom: 60px;
   padding: 0 20px;
 }
 
@@ -11,13 +10,9 @@
   text-transform: uppercase;
   letter-spacing: 4px;
   margin-bottom: 16px;
-  
-  /* Gradient Text Effect */
   background: linear-gradient(90deg, #ffffff, #a5a5b5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
-  /* Subtle glow */
   text-shadow: 0 0 30px rgba(109, 93, 252, 0.4);
 }
 
@@ -25,15 +20,15 @@
   color: #9ca3af;
   font-size: 1.1rem;
   max-width: 600px;
-  margin: 0 auto; /* Centers the text block */
+  margin: 0 auto;
   line-height: 1.6;
 }
 @media (max-width: 768px) {
   .projects-page-top h1 {
-    font-size: 2.2rem; /* Smaller title on mobile */
+    font-size: 2.2rem;
   }
 }
-/* --- Wrapper --- */
+
 .projects-section-bg {
   background-color: #050508;
   padding: 60px 20px;
@@ -52,14 +47,12 @@
   font-weight: 700;
 }
 
-/* --- Grid --- */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
-/* --- Card --- */
 .project-card {
   background-color: #0d0d12;
   border: 1px solid #1f1f2e;
@@ -71,12 +64,11 @@
 }
 
 .project-card:hover {
-  border-color: #6d5dfc; /* Purple Border on Hover */
+  border-color: #6d5dfc;
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(109, 93, 252, 0.15);
 }
 
-/* --- Images --- */
 .card-image-wrapper {
   height: 200px;
   overflow: hidden;
@@ -93,12 +85,11 @@
   transform: scale(1.05);
 }
 
-/* --- Content --- */
 .card-content {
   padding: 24px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Makes sure cards are same height */
+  flex-grow: 1;
 }
 
 .card-header h3 {
@@ -120,7 +111,6 @@
   flex-grow: 1;
 }
 
-/* --- Tags --- */
 .tags-row {
   display: flex;
   flex-wrap: wrap;
@@ -137,17 +127,15 @@
   border: 1px solid #2a2a3a;
 }
 
-/* --- FOOTER (The Buttons) --- */
 .card-footer {
   display: flex;
   align-items: center;
-  gap: 12px; /* Space between the two buttons */
-  margin-top: auto; /* Pushes footer to the bottom */
+  gap: 12px;
+  margin-top: auto;
 }
 
-/* 1. Wide View Project Button */
 .view-project-btn {
-  flex: 1; /* Makes it take up all remaining width */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,7 +150,6 @@
   transition: all 0.3s ease;
 }
 
-/* 2. Square GitHub Button */
 .github-btn {
   width: 48px;
   height: 48px;
@@ -176,8 +163,6 @@
   transition: all 0.3s ease;
 }
 
-/* --- Button Hover Effects --- */
-/* When hovering the CARD, the main button lights up purple */
 .project-card:hover .view-project-btn {
   background-color: #6d5dfc;
   border-color: #6d5dfc;

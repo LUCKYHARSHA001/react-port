@@ -43,7 +43,6 @@
   gap: 32px;
 }
 
-/* Ensure anchor links in navbar look like the existing nav items */
 .navbar-right a {
   text-decoration: none;
   color: inherit;
