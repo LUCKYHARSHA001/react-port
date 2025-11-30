@@ -43,16 +43,6 @@ const Projects = () => {
       link: "https://seekers-things.vercel.app/",
       githubLink: "https://github.com/LUCKYHARSHA001/seekers",
     },
-    {
-      id: 3,
-      title: "Seekers of Lost Things",
-      description:
-        "A decentralized social media platform focused on privacy and user ownership.",
-      tags: ["HTML", "CSS", "JavaScript"],
-      imageUrl: "https://picsum.photos/seed/orbit/600/400",
-      link: "https://seekers-things.vercel.app/",
-      githubLink: "https://github.com/LUCKYHARSHA001/seekers",
-    },
     
   ];
 
@@ -92,7 +82,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    View Project
+                    View Demo
                     <svg
                       viewBox="0 0 24 24"
                       width="16"

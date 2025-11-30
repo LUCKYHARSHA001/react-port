@@ -1,0 +1,293 @@
+:root {
+  --vscode-bg: #1e1e1e;
+  --vscode-sidebar: #252526;
+  --vscode-text: #d4d4d4;
+  --vscode-comment: #6a9955;
+  --vscode-keyword: #569cd6;
+  --vscode-string: #ce9178;
+  --vscode-function: #dcdcaa;
+  --vscode-number: #b5cea8;
+  --vscode-border: #3e3e42;
+  --vscode-accent: #007acc;
+  --vscode-hover: #2a2d2e;
+  --bg-dark: #0a0a0a;
+}
+
+.contact-page-wrapper {
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Stacks header above IDE */
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.top-part {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.top-part h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+  text-shadow: 0 0 20px rgba(100, 100, 255, 0.3);
+}
+
+.top-part p {
+  font-size: 1.1rem;
+  color: #888;
+  font-weight: 400;
+}
+
+.ide-container {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 600px; /* Ensure enough height */
+  background-color: var(--vscode-bg);
+  color: var(--vscode-text);
+  font-family: 'Consolas', 'Courier New', monospace; /* Monospace for code look */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7); /* Deep shadow */
+  border: 1px solid var(--vscode-border);
+  position: relative;
+}
+
+.ide-sidebar {
+  width: 260px;
+  background-color: var(--vscode-sidebar);
+  border-right: 1px solid var(--vscode-border);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0; /* Prevents sidebar from shrinking */
+}
+
+.sidebar-header {
+  padding: 12px 20px;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #bbbbbb;
+  text-transform: uppercase;
+  background-color: #333333; /* Slightly lighter header */
+}
+
+.explorer-section {
+  padding: 10px 0;
+}
+
+.explorer-title {
+  padding: 8px 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #cccccc;
+}
+
+.file-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-item {
+  padding: 6px 20px 6px 35px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--vscode-text);
+  text-decoration: none; /* Remove underline from links */
+  transition: background 0.2s;
+}
+
+.file-item:hover {
+  background-color: var(--vscode-hover);
+  color: white;
+}
+
+.file-icon {
+  width: 18px;
+  text-align: center;
+  opacity: 0.8;
+  font-size: 1rem;
+}
+
+.ide-editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--vscode-bg);
+}
+
+.editor-tabs {
+  background-color: #1e1e1e; /* Match editor bg */
+  display: flex;
+  height: 40px;
+  border-bottom: 1px solid var(--vscode-border);
+  overflow-x: auto; /* Scroll if too many tabs */
+}
+
+.tab {
+  background-color: #1e1e1e;
+  border-right: 1px solid var(--vscode-border);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  border-top: 2px solid var(--vscode-accent); /* Active tab indicator */
+  color: white;
+  cursor: pointer;
+}
+
+.tab-icon {
+  color: #61dafb; /* React Blue */
+  font-size: 1.1rem;
+}
+
+.code-area {
+  padding: 25px 10px;
+  overflow-y: auto;
+  flex: 1;
+  counter-reset: line; /* Setup for pure CSS line numbers if needed later */
+}
+
+.code-line {
+  display: flex;
+  line-height: 1.6; /* Comfortable reading height */
+  font-size: 1rem;
+  align-items: flex-start; /* Align to top for multiline textarea */
+}
+
+.line-num {
+  width: 45px;
+  text-align: right;
+  padding-right: 20px;
+  color: #6e7681; /* Dim grey for numbers */
+  font-size: 0.9rem;
+  user-select: none; /* Prevent selecting line numbers */
+}
+
+.code-content {
+  flex: 1;
+  padding-left: 5px;
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on small screens */
+  align-items: center;
+}
+
+.keyword { color: var(--vscode-keyword); }
+.function { color: var(--vscode-function); }
+.string { color: var(--vscode-string); }
+.variable { color: #9cdcfe; } /* Light Blue */
+.bracket { color: #ffd700; } /* Gold */
+.comment { color: var(--vscode-comment); font-style: italic; }
+
+.code-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px dashed #444; /* Subtle guide line */
+  color: var(--vscode-string); /* Orange text for inputs */
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  padding: 0 4px;
+  transition: all 0.3s ease;
+}
+
+.code-input:focus {
+  border-bottom: 1px solid var(--vscode-accent);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.code-input::placeholder {
+  color: var(--vscode-comment); /* Green placeholder looks like comments */
+  opacity: 0.6;
+}
+
+textarea.code-input {
+  resize: none;
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.submit-btn {
+  background-color: var(--vscode-accent);
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #0062a3; /* Darker blue */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .contact-page-wrapper {
+    padding: 20px 10px;
+  }
+
+  .top-part h1 {
+    font-size: 2rem;
+  }
+
+  .ide-container {
+    flex-direction: column; /* Stack sidebar on top of editor */
+    height: auto;
+  }
+
+  .ide-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--vscode-border);
+  }
+
+  /* Make sidebar horizontal scrolling or just list items */
+  .file-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
+  
+  .file-item {
+    padding: 10px;
+    border: 1px solid #333;
+    margin: 5px;
+    border-radius: 4px;
+  }
+
+  .code-input {
+    width: 100% !important; /* Force inputs to take full width on mobile */
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .code-content {
+    display: block; /* Break flex layout for lines with inputs */
+    padding-left: 0;
+  }
+
+  .line-num {
+    display: none; /* Hide line numbers on very small screens to save space */
+  }
+}

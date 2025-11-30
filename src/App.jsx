@@ -11,6 +11,7 @@ import Heropage from "./components/heropage.jsx";
 import SkillPage from "./components/Skills.jsx"
 import Contact from "./components/contact.jsx"
 import Projects from "./components/Projects.jsx"
+import VScode from "./components/ContactIDE.jsx"
 const LoadingScreen = ({ onComplete }) => {
   useEffect(() => {
     const timer = setTimeout(onComplete, 2500);
@@ -93,7 +94,7 @@ function App() {
               <Heropage />
               <SkillPage/>
               <Projects/>
-              <Contact/>
+              <VScode/>
             </div>
           </motion.div>
         )}

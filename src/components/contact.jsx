@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Contact.css"
 const contact = () => {
   return (
-    <div className="contact-page" id="Contact">
+    <div className="contact-page" >
       <div className="top-part">
         <h1>initiate Contact</h1>
         <p>Ready to launch your next project? Signal me.</p>
