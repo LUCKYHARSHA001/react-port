@@ -66,7 +66,7 @@ const Heropage = () => {
             </svg>
           </a>
           <a
-            href="https://www.linkedin.com/in/harshaalla"
+            href="https://www.linkedin.com/in/harshaalla7/"
             className="linkedin-cta"
             target="_blank"
             rel="noopener noreferrer"
