@@ -8,6 +8,15 @@ const JavaIcon = () => (
   </svg>
 );
 
+const FlaskIcon = () => (
+  <svg viewBox="0 0 260 260" className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+    <path
+      fill="currentColor"
+      d="M130 0C58.2 0 0 58.2 0 130s58.2 130 130 130 130-58.2 130-130S201.8 0 130 0zm0 10c66.3 0 120 53.7 120 120s-53.7 120-120 120S10 196.3 10 130 63.7 10 130 10zm-5.2 26.8l-34 126.8h36.6l34.1-126.8H124.8zm-62.7 17v82.1H87V53.8H62.1zm97.2 0v82.1H184V53.8h-24.7z"
+    />
+  </svg>
+);
+
 const JsIcon = () => (
   <svg viewBox="0 0 100 100" fill="currentColor" className="w-full h-full">
     <path d="M0 0h100v100H0z" fill="transparent" />
@@ -261,7 +270,7 @@ const skillCategories = [
     skills: [
       { name: "Node.js", icon: NodeIcon, color: "#339933" },
       { name: "SQL", icon: MySqlIcon, color: "#083357ff" },
-      { name: "Python", icon: PythonIcon, color: "#3776AB" },
+      { name: "Flask", icon: FlaskIcon, color: "#3776AB" },
     ],
   },
   {
