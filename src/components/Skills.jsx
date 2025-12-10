@@ -255,6 +255,31 @@ const VsCodeIcon = () => (
   </svg>
 );
 
+const MongoIcon = () => (
+  <svg viewBox="0 0 24 24" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path 
+      d="M12 22C12 22 4 16 4 10C4 5 12 2 12 2C12 2 20 5 20 10C20 16 12 22 12 22Z" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+    />
+    <path 
+      d="M12 22V2" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+    />
+  </svg>
+);
+
+const N8nIcon = () => (
+  <svg viewBox="0 0 24 24" className="w-full h-full" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.723 18.067l-2.174 2.174c-.45.45-1.178.45-1.628 0l-2.617-2.617c-.45-.45-.45-1.178 0-1.628l2.174-2.174 2.617 2.617c.45.45.45 1.178 0 1.628zm-4.79-4.79l-1.087 1.087-2.617-2.617 1.087-1.087c.45-.45 1.178-.45 1.628 0l2.617 2.617c.45.45.45 1.178 0 1.628v-1.628zm4.79-4.79l1.087-1.087-2.617-2.617-1.087 1.087c-.45.45-1.178.45-1.628 0l-2.617-2.617-.543.543 3.704 3.704c.45.45 1.178.45 1.628 0l2.617-2.617.543.543-3.704-3.704zm4.79 4.79l1.087-1.087 2.617 2.617-1.087 1.087c-.45.45-1.178.45-1.628 0l-2.617-2.617c-.45-.45-.45-1.178 0-1.628v1.628z" />
+  </svg>
+);
+
 const skillCategories = [
   {
     title: "Frontend Engineering",
@@ -271,6 +296,7 @@ const skillCategories = [
       { name: "Node.js", icon: NodeIcon, color: "#339933" },
       { name: "SQL", icon: MySqlIcon, color: "#083357ff" },
       { name: "Flask", icon: FlaskIcon, color: "#3776AB" },
+      { name: "MongoDB", icon: MongoIcon, color: "#339933" },
     ],
   },
   {
@@ -288,6 +314,7 @@ const skillCategories = [
       { name: "Git", icon: GitIcon, color: "#F05032" },
       { name: "VS Code", icon: VsCodeIcon, color: "#F7931E" },
       { name: "Figma", icon: FigmaIcon, color: "#A259FF" },
+      { name: "N8N", icon: N8nIcon, color: "#F05032" },
     ],
   },
 ];
