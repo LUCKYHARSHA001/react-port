@@ -25,20 +25,20 @@ const Projects = () => {
     },
     {
       id: 3,
+      title: "Credit Risk System",
+      description:
+        "A platform focused on reducing number of frauds in the time of loans",
+      tags: ["Flutter", "Node Js", "machine learning"],
+      imageUrl: "https://picsum.photos/seed/nebula/600/400",
+      link: "https://credit-risk-system-loan.netlify.app/",
+      githubLink: "https://github.com/LUCKYHARSHA001/Credit_Risk_System",
+    },
+    {
+      id: 4,
       title: "Todo App",
       description:
         "A daily based application used for adding the todos and making the changes.",
       tags: ["React", "Flask", "CSS"],
-      imageUrl: "https://picsum.photos/seed/nebula/600/400",
-      link: "https://seekers-things.vercel.app/",
-      githubLink: "https://github.com/LUCKYHARSHA001/seekers",
-    },
-    {
-      id: 4,
-      title: "Seekers of Lost Things",
-      description:
-        "A decentralized social media platform focused on finding on the lost items",
-      tags: ["HTML", "CSS", "JavaScript"],
       imageUrl: "https://picsum.photos/seed/nebula/600/400",
       link: "https://seekers-things.vercel.app/",
       githubLink: "https://github.com/LUCKYHARSHA001/seekers",
