@@ -35,14 +35,24 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: "Todo App",
+      title: "FindJob",
       description:
-        "A daily based application used for adding the todos and making the changes.",
-      tags: ["React", "Flask", "CSS"],
+        "A daily based application used for finding jobs based on the particular locations",
+      tags: ["React", "Node", "CSS"],
       imageUrl: "https://picsum.photos/seed/nebula/600/400",
-      link: "https://maketodo.vercel.app/",
-      githubLink: "https://github.com/LUCKYHARSHA001/todo_react_front",
+      link: "https://findjob-test.vercel.app/",
+      githubLink: "https://github.com/LUCKYHARSHA001/findjobs_front",
     },
+    // {
+    //   id: 5,
+    //   title: "Todo App",
+    //   description:
+    //     "A daily based application used for adding the todos and making the changes.",
+    //   tags: ["React", "Flask", "CSS"],
+    //   imageUrl: "https://picsum.photos/seed/nebula/600/400",
+    //   link: "https://maketodo.vercel.app/",
+    //   githubLink: "https://github.com/LUCKYHARSHA001/todo_react_front",
+    // },
   ];
 
   const handleMouseMove = (e) => {
